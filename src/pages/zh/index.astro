@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomePage from '../../components/HomePage.astro';
+import '../../styles/global.css';
+import { getSite } from '../../data/site';
+const site = getSite('zh');
+---
+<BaseLayout lang="zh-CN" title={site.seo.title} description={site.seo.description}>
+  <HomePage lang="zh" />
+</BaseLayout>

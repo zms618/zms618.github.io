@@ -1,0 +1,25 @@
+---
+import { type Publication, type Lang } from '../data/site';
+import { ui } from '../data/ui';
+interface Props { publication: Publication; lang: Lang; }
+const { publication: pub, lang } = Astro.props;
+const t = ui[lang];
+const authors = pub.authors;
+---
+<article class:list={['publication', { 'publication-featured': pub.featured }]} id={`publication-${pub.id}`}>
+  {pub.featured && <h3 class="publication-title-wide">{pub.title}</h3>}
+  {pub.showVenue === false
+    ? <div class="pub-badge">{lang === 'zh' ? '稿件在审' : 'Manuscript under Review'}</div>
+    : <div class:list={["pub-badge", { "preserve-case": pub.badge === 'Neurocomputing' }]}>{pub.badge}<span class="pub-status">{pub.status === 'Accepted' ? t.accepted : t.underReview}</span></div>}
+  {pub.featured && pub.status === 'Accepted' && authors.length > 0 && <p class="authors publication-authors-wide">{authors.map((author, i) => <>{i > 0 && ', '}{author.replace(/[†*]/g, '') === 'Cheng He' ? <strong class="author-self">{author}</strong> : author}</>)}</p>}
+  <div class="pub-content">
+    {!pub.featured && <h3>{pub.title}</h3>}
+    {!pub.featured && pub.status === 'Accepted' && authors.length > 0 && <p class="authors">{authors.map((author, i) => <>{i > 0 && ', '}{author.replace(/[†*]/g, '') === 'Cheng He' ? <strong class="author-self">{author}</strong> : author}</>)}</p>}
+    {pub.showVenue === false
+      ? <p class="venue"><span>{pub.role} · {lang === 'zh' ? '稿件在审' : 'Manuscript under Review'}</span></p>
+      : <p class="venue"><span>{pub.venue}</span><span class="venue-rating">{pub.rating}</span><span> · {pub.role}</span></p>}
+    {pub.summary && <p>{pub.summary}</p>}
+    {pub.links.some(link => link.href) && <div class="links">{pub.links.filter(link => link.href).map(link => <a href={link.href}>{link.label} ↗</a>)}</div>}
+  </div>
+  {pub.image && <figure class="publication-figure"><img src={pub.image} alt={pub.imageAlt ?? pub.title} loading="lazy" /></figure>}
+</article>

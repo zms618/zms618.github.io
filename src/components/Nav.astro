@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+interface Props { lang?: 'en' | 'zh'; }
+const { lang = 'en' } = Astro.props;
+const items = ['Research', 'Publications', 'Projects', 'About', 'Capabilities', 'Contact'];
+const zhItems = ['研究', '论文', '项目', '关于', '技术能力', '联系'];
+const zhIds = ['research', 'publications', 'projects', 'about', 'capabilities', 'contact'];
+---
+<header class="nav-shell">
+  <nav class="nav inner" aria-label="Primary navigation">
+    <a class="brand" href="#top">{site.initials}<span>.</span></a>
+    <div class="nav-links">
+      {lang === 'en' ? items.map((item) => <a href={`#${item.toLowerCase()}`}>{item}</a>) : zhItems.map((item, i) => <a href={`#${zhIds[i]}`}>{item}</a>)}
+    </div>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+      <a class="lang" href={lang === "en" ? "/zh/" : "/"}>{lang === "en" ? "中文" : "EN"}</a>
+    </div>
+  </nav>
+</header>
+<script>
+  const button = document.querySelector('#theme-toggle');
+  button?.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'dark'));
+  button?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const dark = root.dataset.theme === 'dark';
+    if (dark) delete root.dataset.theme;
+    else root.dataset.theme = 'dark';
+    button.setAttribute('aria-pressed', String(!dark));
+    try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch { /* Storage may be unavailable. */ }
+  });
+</script>

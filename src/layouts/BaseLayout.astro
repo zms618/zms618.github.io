@@ -1,0 +1,44 @@
+---
+import { site } from '../data/site';
+interface Props {
+  lang?: 'en' | 'zh-CN';
+  title: string;
+  description: string;
+}
+const { title, description, lang = "en" } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={site.seo.keywords.join(", ")} />
+    <meta name="theme-color" content="#f3f1ea" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL('/', Astro.site)} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL('/zh/', Astro.site)} />
+    <meta property="og:image" content={new URL(site.avatar, Astro.site)} />
+    <meta property="og:image:alt" content="Cheng He / 贺铖" />
+    <meta property="og:locale" content={lang === "en" ? "en_US" : "zh_CN"} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    {site.isPlaceholder && <meta name="robots" content="noindex, follow" />}
+    <title>{title}</title>
+    <script is:inline>
+      try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+      } catch { /* Storage may be unavailable. */ }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+    <slot />
+  </body>
+</html>
