@@ -21,5 +21,5 @@ const authors = pub.authors;
     {pub.summary && <p>{pub.summary}</p>}
     {pub.links.some(link => link.href) && <div class="links">{pub.links.filter(link => link.href).map(link => <a href={link.href}>{link.label} ↗</a>)}</div>}
   </div>
-  {pub.image && <figure class="publication-figure"><img src={pub.image} alt={pub.imageAlt ?? pub.title} loading="lazy" /></figure>}
+  {pub.image && <figure class="publication-figure"><img src={pub.image} alt={lang === 'zh' ? (pub.imageAltZh ?? pub.imageAlt ?? pub.title) : (pub.imageAlt ?? pub.title)} loading="lazy" /></figure>}
 </article>
