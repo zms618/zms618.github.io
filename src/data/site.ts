@@ -47,8 +47,7 @@ const publications: Publication[] = [
     venue: 'Neurocomputing', rating: 'CAS Q2', badge: 'Neurocomputing', role: 'First Author', status: 'Accepted', featured: true, public: true,
     summary: 'CytoSet refines and spatially groups detection queries while coupling ordered center alignment with prediction quality, improving Bethesda-grade consistency and reducing high-risk cell downgrading errors in fine-grained detection.',
     image: '/images/cytoset-architecture.png', imageAlt: 'CytoSet model architecture', imageAltZh: 'CytoSet 模型架构图',
-    highlights: [],
-    links: [{ label: 'Model diagram (PDF)', href: '/papers/cytoset-architecture.pdf' }],
+    highlights: [], links: [],
   },
   {
     id: 'single-source-domain-generalization', title: 'Single-Source Domain Generalization',
@@ -64,7 +63,7 @@ const publications: Publication[] = [
 ];
 
 export const publicationGroups = {
-  firstAuthor: ['tg-wspis', 'single-source-domain-generalization', 'cytoset'],
+  firstAuthor: ['tg-wspis', 'cytoset', 'single-source-domain-generalization'],
   collaborative: ['counterfactual-fusion', 'dt-vg', 'morphology-steering'],
 };
 
@@ -177,7 +176,7 @@ export function getSite(lang: Lang): SiteData {
       role: ({ 'First Author': '第一作者', 'Fourth Author': '第四作者', 'Sixth Author': '第六作者' } as Record<string, string>)[pub.role] ?? pub.role,
       summary: ({"tg-wspis":"针对图像级标签难以刻画细胞分布异质性的问题，TG-WSPIS 通过三类文本描述与软对齐共识机制实现细粒度跨模态对齐，在仅使用文本弱监督的条件下取得接近全监督的病理图像分割效果。","counterfactual-fusion":"针对文本模态样本级可信度不均的问题，CRAFT 通过跨模态一致性估计文本可信度，并利用反事实分支削弱不可靠语言信息的影响，缓解语言主导的预测偏见并提升多模态融合鲁棒性。","dt-vg":"针对单张静态无人机图像中多段轨迹语义依赖与运动一致性难以建模的问题，DT-VG 通过层级化文本编码和物理感知结构约束联合建模语义与几何信息，实现连续、合理且几何精确的轨迹预测。","cytoset":"针对检测器忽略贝塞斯达类别顺序与跨级错误方向的问题，CytoSet 通过查询语义精炼、空间分组及有序中心对齐与质量耦合，改善细粒度检测的诊断等级一致性并减少高风险细胞的降级误判。","morphology-steering":"针对可变形检测器缺乏诊断形态引导、局部采样证据不足的问题，该方法通过冻结文本原型提供语义兼容性，并在最终解码器层施加有界残差，提升细微形态差异的判别能力与跨域定位精度。","single-source-domain-generalization":"我们研究医学目标检测中的单源域泛化问题，重点关注分布偏移条件下的实例级响应异质性。该方法在不增加推理阶段计算开销的情况下，提升了跨扫描设备与跨数据集评测中的模型鲁棒性。"} as Record<string, string>)[pub.id] ?? pub.summary,
       highlights: pub.highlights.map(text => text.replace('Manuscript result:', '稿件报告结果：').replace('over the strongest source-only competitor', '（相对最强 source-only 对比方法）').replace('average', '平均').replace('+5.23 percentage points over ARML', '较 ARML 提高 5.23 个百分点')),
-      links: pub.links.map(link => ({ ...link, label: ({ 'Paper (PDF)': '论文（PDF）', 'Poster (PDF)': '海报（PDF）', 'Project repository': '项目仓库', 'Model diagram (PDF)': '模型图（PDF）' } as Record<string, string>)[link.label] ?? link.label })),
+      links: pub.links.map(link => ({ ...link, label: ({ 'Paper (PDF)': '论文（PDF）', 'Poster (PDF)': '海报（PDF）', 'Project repository': '项目仓库' } as Record<string, string>)[link.label] ?? link.label })),
     })),
     projects: [{
       ...site.projects[0],
