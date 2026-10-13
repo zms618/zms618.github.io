@@ -6,7 +6,7 @@ const { publication: pub, lang } = Astro.props;
 const t = ui[lang];
 const authors = pub.authors;
 ---
-<article class:list={['publication', { 'publication-featured': pub.featured }]} id={`publication-${pub.id}`}>
+<article class:list={['publication', { 'publication-featured': pub.featured, 'publication-accepted': !pub.featured && pub.status === 'Accepted' }]} id={`publication-${pub.id}`}>
   {pub.featured && <h3 class="publication-title-wide">{pub.title}</h3>}
   {pub.showVenue === false
     ? <div class="pub-badge">{lang === 'zh' ? '稿件在审' : 'Manuscript under Review'}</div>

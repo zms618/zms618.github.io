@@ -264,6 +264,10 @@ body { overflow-wrap: anywhere; }
 .research-card h3 { font-size: 1.5rem; line-height: 1.25; }
 .research-card p { font-size: .94rem; }
 .research-card .tags { margin-top: auto; padding-top: 14px; }
+.publication-accepted { background: var(--surface); padding: 26px 30px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; margin: 18px 0; }
+.publication-accepted .pub-badge { color: var(--accent); font-weight: 700; }
+.publication-accepted .pub-content > h3 { font-size: 1.3rem; margin: 0 0 8px; }
+.publication-accepted .pub-content > p:last-of-type { margin-bottom: 0; }
 .publication-featured { background: var(--surface); padding: 30px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; margin: 18px 0; }
 .publication-featured { grid-template-columns: 150px minmax(0, 1fr) minmax(240px, 32%); align-items: center; }
 .publication-featured .publication-title-wide { grid-column: 2 / -1; grid-row: 1; max-width: none; margin-bottom: 18px; }
@@ -296,6 +300,7 @@ body { overflow-wrap: anywhere; }
   .hero-card { padding: 20px; }
   .hero-card .portrait { max-width: 130px; }
   .publication-featured { padding: 24px; }
+  .publication-accepted { padding: 22px 24px; }
   .publication-featured { grid-template-columns: 1fr; }
   .publication-featured .publication-title-wide, .publication-featured .pub-badge, .publication-featured .publication-authors-wide, .publication-featured .pub-content { grid-column: 1; grid-row: auto; }
   .publication-featured .publication-title-wide, .publication-featured .publication-authors-wide { margin-bottom: 0; }
@@ -306,5 +311,6 @@ body { overflow-wrap: anywhere; }
   .project-results { padding-inline: 18px; }
   .hero-actions .button { padding: 11px 13px; }
   .publication-featured { padding: 20px; }
+  .publication-accepted { padding: 20px; }
   .contact, .why-phd { padding-block: 60px; }
 }
