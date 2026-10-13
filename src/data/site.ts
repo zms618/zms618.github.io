@@ -43,7 +43,7 @@ const publications: Publication[] = [
   },
   {
     id: 'cytoset', title: 'CytoSet: Bethesda-Order-Aware Set Prediction for Cervical Cytology Cell Detection',
-    authors: ['Cheng He', 'Fufeng Chen', 'Fuhai Chen', 'Weiwei Guo', 'Chunxu Yang', 'Zhiwei Chen', 'Qingqing Zhou'],
+    authors: ['Cheng He', 'Fufeng Chen', 'Fuhai Chen', 'Weiwei Guo', 'Houbing Zheng', 'Chunxu Yang', 'Zhiwei Chen', 'Qingqing Zhou', 'Bin Fang'],
     venue: 'Neurocomputing', rating: 'CAS Q2', badge: 'Neurocomputing', role: 'First Author', status: 'Accepted', featured: true, public: true,
     summary: 'CytoSet refines and spatially groups detection queries while coupling ordered center alignment with prediction quality, improving Bethesda-grade consistency and reducing high-risk cell downgrading errors in fine-grained detection.',
     image: '/images/cytoset-architecture.png', imageAlt: 'CytoSet model architecture', imageAltZh: 'CytoSet 模型架构图',
