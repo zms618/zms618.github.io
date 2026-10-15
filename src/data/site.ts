@@ -82,9 +82,9 @@ export const site = {
   affiliation: 'Fuzhou University', school: 'School of Computer and Data Science', role: "Master’s Student",
   advisor: { name: 'Fuhai Chen', href: 'https://ccds.fzu.edu.cn/info/1204/9782.htm' },
   heroIdentity: 'M.S. Student at Fuzhou University · Applying for Fall 2027 PhD programs',
-  tagline: 'I study computer vision and deep learning, with computational pathology as my primary application domain. My research explores fine-grained object detection, weakly supervised and multimodal visual learning, and domain generalization and robust representation learning.',
-  taglineZh: '我的研究主要涉及计算机视觉与深度学习，以计算病理学为主要应用场景，关注细粒度目标检测、弱监督与多模态视觉学习，以及领域泛化与鲁棒表征学习。',
-  heroChips: ['Computer Vision', 'Multimodal Learning', 'Computational Pathology', 'Domain Generalization'],
+  tagline: 'I study computer vision, multimodal learning, and medical image analysis, with computational pathology as a major application domain. My research explores fine-grained object detection, weakly supervised learning, and robust generalization. I also follow advances in vision-language-action models (VLA) and world models.',
+  taglineZh: '我的研究兴趣涵盖计算机视觉、多模态学习与医学图像分析，已有工作主要以计算病理学为应用场景，关注细粒度目标检测、弱监督学习与鲁棒泛化。同时关注视觉—语言—动作模型（VLA）与世界模型（World Models）等人工智能前沿进展。',
+  heroChips: ['Computer Vision', 'Multimodal Learning', 'Medical Image Analysis', 'Computational Pathology', 'Frontier Interests: VLA & World Models'],
   contact: {
     title: 'Open to research discussions and collaborations in computer vision, multimodal learning, and computational pathology.',
     prefix: 'I am currently seeking',
@@ -92,9 +92,9 @@ export const site = {
     suffix: 'I welcome academic discussions in computer vision, multimodal learning, computational pathology, and emerging AI technologies, and look forward to exploring research questions, collaborations, and PhD opportunities.',
   },
   seo: {
-    title: 'Cheng He | Computer Vision · Multimodal Learning · Computational Pathology',
-    description: 'Cheng He is a master’s student at Fuzhou University studying computer vision, multimodal learning, computational pathology, weakly supervised learning, and domain generalization.',
-    keywords: ['Cheng He', '贺铖', 'Fuzhou University', 'Computer Vision', 'Computational Pathology', 'Medical Image Analysis', 'Weakly Supervised Learning', 'Multimodal Learning', 'Domain Generalization'],
+    title: 'Cheng He | Computer Vision · Multimodal Learning · Medical Imaging',
+    description: 'Cheng He is a master’s student at Fuzhou University with research interests in computer vision, multimodal learning, and medical image analysis. His work includes computational pathology, and he follows advances in VLA and world models.',
+    keywords: ['Cheng He', '贺铖', 'Fuzhou University', 'Computer Vision', 'Computational Pathology', 'Medical Image Analysis', 'Weakly Supervised Learning', 'Multimodal Learning', 'Domain Generalization', 'VLA', 'World Models'],
   },
   links: { scholar: '', github: 'https://github.com/zms618', orcid: '', linkedin: '' },
   highlights: [
@@ -137,13 +137,13 @@ export const site = {
     title: 'Research Interests & Exploration',
     lead: 'During my master’s studies, I have investigated fine-grained visual perception, weakly supervised and multimodal learning, and domain generalization, gaining experience in algorithm design, model implementation, experimental validation, and scientific writing.',
     paragraphs: [
-      'Beyond my current work, I follow advances in vision-language-action models (VLA), world models, and AI agents through literature reading and technical exploration.',
+      'Beyond my current work, I am interested in how vision-language-action models (VLA) and world models connect perception, reasoning, and action, and what research questions arise at these intersections.',
       'Building on my research experience, I hope to explore questions with scientific and practical value while remaining open to cross-disciplinary research and academic exchange.',
     ],
   },
   about: {
     studentLeadership: 'Class Representative, Master’s Program, Fuzhou University.',
-    bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My research spans computer vision, multimodal learning, and computational pathology, including fine-grained object detection, weakly supervised learning, and domain generalization. I also follow emerging AI technologies and cross-disciplinary research.',
+    bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My research spans computer vision, multimodal learning, and computational pathology, including fine-grained object detection, weakly supervised learning, and domain generalization. I welcome exchanges on these topics and on emerging directions such as VLA and world models.',
     education: [
       { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0' },
       { school: 'Yuzhang Normal University', degree: 'Undergraduate study in Data Science and Big Data Technology', date: 'Sep 2020 – Jun 2024', detail: 'Ranked 2nd in comprehensive evaluation in the major.' },
@@ -163,14 +163,14 @@ export function getSite(lang: Lang): SiteData {
     ...site, name: site.nameZh, location: '中国 · 福州', affiliation: '福州大学', school: '计算机与大数据学院', role: '硕士研究生',
     advisor: { ...site.advisor, name: '陈福海' }, tagline: site.taglineZh,
     heroIdentity: '福州大学硕士研究生 · 2027 Fall 博士申请',
-    heroChips: ['计算机视觉', '多模态学习', '计算病理学', '领域泛化'],
+    heroChips: ['计算机视觉', '多模态学习', '医学图像分析', '计算病理学', '前沿关注：VLA · 世界模型'],
     contact: {
       title: '期待围绕计算机视觉、多模态学习与计算病理学开展交流与合作。',
       prefix: '我计划申请',
       emphasis: '2027 年入学的博士项目',
       suffix: '欢迎围绕计算机视觉、多模态学习、计算病理学及人工智能前沿技术展开学术交流，期待进一步探索有价值的科研问题与合作机会。',
     },
-    seo: { ...site.seo, title: '贺铖 Cheng He | 计算机视觉 · 多模态学习 · 计算病理学', description: '贺铖，福州大学计算机技术专业硕士研究生，研究涉及计算机视觉、多模态学习、计算病理学、弱监督学习及领域泛化。' },
+    seo: { ...site.seo, title: '贺铖 Cheng He | 计算机视觉 · 多模态学习 · 医学图像分析', description: '贺铖，福州大学计算机技术专业硕士研究生，研究兴趣涵盖计算机视觉、多模态学习与医学图像分析，已有工作主要以计算病理学为应用场景，并关注 VLA 与世界模型。' },
     highlights: [
       { value: site.highlights[0].value, label: '论文总数', detail: `${publications.filter(p => p.public && p.role === 'First Author').length} 篇一作论文` },
       { value: '3', label: '研究方向', detail: '病理理解 · 多模态学习 · 泛化' },
@@ -216,13 +216,13 @@ export function getSite(lang: Lang): SiteData {
       title: '研究兴趣与学术探索',
       lead: '硕士阶段，我围绕细粒度视觉感知、弱监督与多模态学习、领域泛化等问题开展研究，积累了算法设计、模型实现、实验验证及科研论文写作经验。',
       paragraphs: [
-        '除已有研究工作外，我也关注视觉—语言—动作模型（VLA）、世界模型（World Models）及 AI Agent 等人工智能前沿进展，通过文献研读和技术实践拓展研究视野。',
+        '除已有研究工作外，我也对视觉—语言—动作模型（VLA）与世界模型（World Models）如何连接感知、推理与行动，以及这些交叉点带来的研究问题感兴趣。',
         '希望在已有科研积累的基础上，持续探索具有科学价值与实际意义的研究问题，并保持跨领域研究与学术交流的开放性。',
       ],
     },
     about: {
       studentLeadership: '学生工作：担任福州大学硕士班班长。',
-      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究主要涉及计算机视觉、多模态学习与计算病理学，包括细粒度目标检测、弱监督学习及领域泛化，并持续关注人工智能前沿技术与跨领域研究进展。',
+      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究主要涉及计算机视觉、多模态学习与计算病理学，包括细粒度目标检测、弱监督学习及领域泛化，也欢迎围绕 VLA 与世界模型等前沿方向开展交流。',
       education: [
         { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0' },
         { school: '豫章师范学院', degree: '数据科学与大数据技术 · 本科', date: '2020.09 – 2024.06', detail: '数学与计算机学院 · 综合测评专业第二' },
