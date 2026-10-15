@@ -140,7 +140,7 @@ figcaption span { color: var(--muted); font-size: .85rem; }
 .skill-group { border-top: 1px solid var(--line); padding: 14px 0; }
 .skill-group p { margin: 5px 0; color: var(--muted); }
 .contact { padding: 88px 0; }
-.capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.capability-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .capability-card { background: var(--bg); padding: 30px; }
 .capability-card h3 { margin-bottom: 24px; font-size: 1.45rem; }
 .capability-card p { color: var(--muted); margin: 24px 0 0; }
