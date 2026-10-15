@@ -129,7 +129,7 @@ export const site = {
   capabilities: [
     { group: 'Medical Imaging & WSI Processing', items: ['OpenSlide', 'OpenCV', 'WSI Processing'], description: 'Experienced in whole-slide image processing, patch construction, and pathology data organization, supporting both cell-level analysis and WSI-level research workflows.' },
     { group: 'Deep Learning & Model Engineering', items: ['Python', 'PyTorch', 'CUDA', 'ONNX', 'TensorRT'], description: 'Able to independently implement, train, debug, and evaluate computer vision models, with experience in ONNX export and TensorRT inference optimization and an emphasis on reproducible experimentation.' },
-    { group: 'Linux & Research Computing Infrastructure', items: ['Linux', 'GPU Servers', 'CUDA', 'System Administration'], description: 'Independently responsible for the laboratory’s Linux/GPU server maintenance, including NVIDIA drivers, CUDA and deep learning environments, user permissions, and troubleshooting. I coordinate shared computing resources and support reliable environments for the team’s model training and experiments.' },
+    { group: 'Linux & Research Computing Infrastructure', items: ['Linux', 'GPU Servers', 'CUDA', 'System Administration'], description: 'Since the laboratory’s early days, I have deployed Linux/GPU servers and set up research computing environments. I independently maintain NVIDIA drivers, CUDA and deep learning environments, manage user permissions, troubleshoot issues, and coordinate shared computing resources to support the team’s model training and experiments.' },
     { group: 'AI-assisted Research & Development', items: ['Claude Code', 'Codex', 'Agent Skills'], description: 'I use AI coding tools for research development and experimental iteration, and develop open-source Agent Skills for paper reading, research idea discovery, and verification. This practice involves research task decomposition, workflow design, and evidence checking.' },
   ],
   researchTools: { label: 'Explore academic-skills on GitHub', href: 'https://github.com/zms618/no-heartburn-academic-skills' },
@@ -208,7 +208,7 @@ export function getSite(lang: Lang): SiteData {
     capabilities: [
       { group: '医学图像与 WSI 数据处理', items: ['OpenSlide', 'OpenCV', 'WSI Processing'], description: '具备全切片图像处理、Patch 构建与病理数据组织经验，支持细胞级分析与 WSI 级研究流程。' },
       { group: '深度学习与模型工程', items: ['Python', 'PyTorch', 'CUDA', 'ONNX', 'TensorRT'], description: '能够独立完成计算机视觉模型的实现、训练调试、评测与实验分析，具备 ONNX 模型转换与 TensorRT 推理优化经验，重视实验的可复现性。' },
-      { group: 'Linux 与科研计算环境', items: ['Linux', 'GPU Servers', 'CUDA', '系统管理'], description: '独立负责实验室 Linux/GPU 服务器的日常运维，包括 NVIDIA 驱动维护、CUDA 与深度学习环境配置、用户权限管理和故障排查；协调共享算力，为课题组模型训练与实验运行提供稳定的科研计算环境。' },
+      { group: 'Linux 与科研计算环境', items: ['Linux', 'GPU Servers', 'CUDA', '系统管理'], description: '从实验室早期起承担 Linux/GPU 服务器部署与科研计算环境搭建，独立负责 NVIDIA 驱动维护、CUDA 与深度学习环境配置、用户权限管理及故障排查；协调共享算力，保障课题组模型训练与实验运行。' },
       { group: 'AI 辅助科研与开发', items: ['Claude Code', 'Codex', 'Agent Skills'], description: '使用 AI 编程工具支持科研开发与实验迭代，设计并开源辅助论文阅读、科研创新点发现与验证的 Agent Skills，具备科研任务拆解、工作流设计与证据核查的实践经验。' },
     ],
     researchTools: { ...site.researchTools, label: '在 GitHub 查看 academic-skills' },
