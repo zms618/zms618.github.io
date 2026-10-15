@@ -128,8 +128,8 @@ export const site = {
   ],
   capabilities: [
     { group: 'Medical Imaging & WSI Processing', items: ['OpenSlide', 'OpenCV', 'WSI Processing'], description: 'Experienced in whole-slide image processing, patch construction, and pathology data organization, supporting both cell-level analysis and WSI-level research workflows.' },
-    { group: 'Deep Learning Research & Experimentation', items: ['PyTorch', 'Python', 'CUDA', 'Linux'], description: 'Able to independently implement, train, evaluate, and analyze computer vision models, with an emphasis on stable and reproducible experimentation.' },
-    { group: 'Model Deployment & Computing Infrastructure', items: ['ONNX', 'TensorRT', 'GPU Infrastructure'], description: 'Experienced in model inference optimization and engineering deployment, while maintaining shared laboratory GPU servers and coordinating computing resources for research.' },
+    { group: 'Deep Learning & Model Engineering', items: ['Python', 'PyTorch', 'CUDA', 'ONNX', 'TensorRT'], description: 'Able to independently implement, train, debug, and evaluate computer vision models, with experience in ONNX export and TensorRT inference optimization and an emphasis on reproducible experimentation.' },
+    { group: 'Linux & Research Computing Infrastructure', items: ['Linux', 'GPU Servers', 'CUDA', 'System Administration'], description: 'Independently responsible for the laboratory’s Linux/GPU server maintenance, including NVIDIA drivers, CUDA and deep learning environments, user permissions, and troubleshooting. I coordinate shared computing resources and support reliable environments for the team’s model training and experiments.' },
     { group: 'AI-assisted Research & Development', items: ['Claude Code', 'Codex', 'Agent Skills'], description: 'I use AI coding tools for research development and experimental iteration, and develop open-source Agent Skills for paper reading, research idea discovery, and verification. This practice involves research task decomposition, workflow design, and evidence checking.' },
   ],
   researchTools: { label: 'Explore academic-skills on GitHub', href: 'https://github.com/zms618/no-heartburn-academic-skills' },
@@ -142,12 +142,16 @@ export const site = {
     ],
   },
   about: {
+    studentLeadership: 'Class Representative, Master’s Program, Fuzhou University.',
     bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My research spans computer vision, multimodal learning, and computational pathology, including fine-grained object detection, weakly supervised learning, and domain generalization. I also follow emerging AI technologies and cross-disciplinary research.',
     education: [
       { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0' },
       { school: 'Yuzhang Normal University', degree: 'Undergraduate study in Data Science and Big Data Technology', date: 'Sep 2020 – Jun 2024', detail: 'Ranked 2nd in comprehensive evaluation in the major.' },
     ],
-    awards: ['First Prize Academic Scholarship', 'Merit Student', 'Outstanding Graduate', 'Second Prize, Lanqiao Cup — Python'],
+    awards: [
+      { stage: 'Master’s · Fuzhou University', items: ['Outstanding Student Leader', 'Third Prize, Midterm Scholarship'] },
+      { stage: 'Undergraduate · Yuzhang Normal University', items: ['First Prize Academic Scholarship', 'Merit Student', 'Outstanding Graduate', 'Second Prize, Lanqiao Cup — Python'] },
+    ],
   },
 };
 export type SiteData = typeof site;
@@ -203,8 +207,8 @@ export function getSite(lang: Lang): SiteData {
     }],
     capabilities: [
       { group: '医学图像与 WSI 数据处理', items: ['OpenSlide', 'OpenCV', 'WSI Processing'], description: '具备全切片图像处理、Patch 构建与病理数据组织经验，支持细胞级分析与 WSI 级研究流程。' },
-      { group: '深度学习研究与实验', items: ['PyTorch', 'Python', 'CUDA', 'Linux'], description: '能够独立完成计算机视觉模型的实现、训练、评测与实验分析，并关注实验的稳定性与可复现性。' },
-      { group: '模型部署与计算基础设施', items: ['ONNX', 'TensorRT', 'GPU Infrastructure'], description: '具备模型推理优化与工程部署经验，并负责实验室共享 GPU 服务器维护与科研算力协调。' },
+      { group: '深度学习与模型工程', items: ['Python', 'PyTorch', 'CUDA', 'ONNX', 'TensorRT'], description: '能够独立完成计算机视觉模型的实现、训练调试、评测与实验分析，具备 ONNX 模型转换与 TensorRT 推理优化经验，重视实验的可复现性。' },
+      { group: 'Linux 与科研计算环境', items: ['Linux', 'GPU Servers', 'CUDA', '系统管理'], description: '独立负责实验室 Linux/GPU 服务器的日常运维，包括 NVIDIA 驱动维护、CUDA 与深度学习环境配置、用户权限管理和故障排查；协调共享算力，为课题组模型训练与实验运行提供稳定的科研计算环境。' },
       { group: 'AI 辅助科研与开发', items: ['Claude Code', 'Codex', 'Agent Skills'], description: '使用 AI 编程工具支持科研开发与实验迭代，设计并开源辅助论文阅读、科研创新点发现与验证的 Agent Skills，具备科研任务拆解、工作流设计与证据核查的实践经验。' },
     ],
     researchTools: { ...site.researchTools, label: '在 GitHub 查看 academic-skills' },
@@ -217,12 +221,16 @@ export function getSite(lang: Lang): SiteData {
       ],
     },
     about: {
+      studentLeadership: '学生工作：担任福州大学硕士班班长。',
       bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究主要涉及计算机视觉、多模态学习与计算病理学，包括细粒度目标检测、弱监督学习及领域泛化，并持续关注人工智能前沿技术与跨领域研究进展。',
       education: [
         { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0' },
         { school: '豫章师范学院', degree: '数据科学与大数据技术 · 本科', date: '2020.09 – 2024.06', detail: '数学与计算机学院 · 综合测评专业第二' },
       ],
-      awards: ['学业奖学金一等奖', '三好学生', '优秀毕业生', '蓝桥杯 Python 组二等奖'],
+      awards: [
+        { stage: '硕士阶段 · 福州大学', items: ['优秀学生干部', '中期奖学金三等奖'] },
+        { stage: '本科阶段 · 豫章师范学院', items: ['学业奖学金一等奖', '三好学生', '优秀毕业生', '蓝桥杯 Python 组二等奖'] },
+      ],
     },
   };
 }

@@ -115,12 +115,13 @@ const collaborative = orderPublications(publicationGroups.collaborative);
               <p>{edu.detail}</p>
             </article>
           ))}
+          <p class="student-leadership">{site.about.studentLeadership}</p>
         </div>
       </div>
       <aside class="about-side">
         <div>
           <h3>{t.awards}</h3>
-          <ul>{site.about.awards.map((award) => <li>{award}</li>)}</ul>
+          {site.about.awards.map((group) => <div class="award-group"><h4>{group.stage}</h4><ul>{group.items.map((award) => <li>{award}</li>)}</ul></div>)}
         </div>
       </aside>
     </div>
