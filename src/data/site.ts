@@ -47,7 +47,7 @@ const publications: Publication[] = [
     venue: 'Neurocomputing', rating: 'CAS Q2', badge: 'Neurocomputing', role: 'First Author', status: 'Accepted', featured: true, public: true,
     summary: 'CytoSet refines and spatially groups detection queries while coupling ordered center alignment with prediction quality, improving Bethesda-grade consistency and reducing high-risk cell downgrading errors in fine-grained detection.',
     image: '/images/cytoset-architecture.png', imageAlt: 'CytoSet model architecture', imageAltZh: 'CytoSet 模型架构图',
-    highlights: [], links: [],
+    highlights: [], links: [{ label: 'Paper (PDF)', href: '/papers/cytoset-neurocomputing.pdf' }, { label: 'Project repository', href: 'https://github.com/zms618/CytoSet' }],
   },
   {
     id: 'single-source-domain-generalization', title: 'Single-Source Domain Generalization',
