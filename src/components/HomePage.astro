@@ -113,9 +113,9 @@ const collaborative = orderPublications(publicationGroups.collaborative);
               <div><strong>{edu.school}</strong><span>{edu.degree}</span></div>
               <time>{edu.date}</time>
               <p>{edu.detail}</p>
+              {edu.studentLeadership && <p class="student-leadership">{lang === 'zh' ? `学生工作：担任${edu.school}${edu.studentLeadership}。` : edu.studentLeadership}</p>}
             </article>
           ))}
-          <p class="student-leadership">{site.about.studentLeadership}</p>
         </div>
       </div>
       <aside class="about-side">

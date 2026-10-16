@@ -142,10 +142,9 @@ export const site = {
     ],
   },
   about: {
-    studentLeadership: 'Class Representative, Master’s Program, Fuzhou University.',
     bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My research spans computer vision, multimodal learning, and computational pathology, including fine-grained object detection, weakly supervised learning, and domain generalization. I welcome exchanges on these topics and on emerging directions such as VLA and world models.',
     education: [
-      { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0' },
+      { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0', studentLeadership: 'Class Representative, Master’s Program' },
       { school: 'Yuzhang Normal University', degree: 'Undergraduate study in Data Science and Big Data Technology', date: 'Sep 2020 – Jun 2024', detail: 'Ranked 2nd in comprehensive evaluation in the major.' },
     ],
     awards: [
@@ -221,10 +220,9 @@ export function getSite(lang: Lang): SiteData {
       ],
     },
     about: {
-      studentLeadership: '学生工作：担任福州大学硕士班班长。',
       bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究主要涉及计算机视觉、多模态学习与计算病理学，包括细粒度目标检测、弱监督学习及领域泛化，也欢迎围绕 VLA 与世界模型等前沿方向开展交流。',
       education: [
-        { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0' },
+        { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0', studentLeadership: '班长' },
         { school: '豫章师范学院', degree: '数据科学与大数据技术 · 本科', date: '2020.09 – 2024.06', detail: '数学与计算机学院 · 综合测评专业第二' },
       ],
       awards: [
