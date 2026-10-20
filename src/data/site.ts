@@ -82,19 +82,19 @@ export const site = {
   affiliation: 'Fuzhou University', school: 'School of Computer and Data Science', role: "Master’s Student",
   advisor: { name: 'Fuhai Chen', href: 'https://ccds.fzu.edu.cn/info/1204/9782.htm' },
   heroIdentity: 'M.S. Student at Fuzhou University · Applying for Fall 2027 PhD programs',
-  tagline: 'My research spans multimodal learning, reliable AI, and medical AI. I study VLMs, cross-modal alignment, visual-language grounding, and evidence reasoning; domain generalization, distribution shifts, test-time adaptation (TTA), and robustness; and computational pathology, medical imaging, fine-grained cell analysis, and medical multimodal learning. I also follow embodied AI, including VLA models, world models, and multimodal agents.',
-  taglineZh: '我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能及具身智能前沿：包括视觉语言模型、跨模态对齐、视觉语言定位与证据推理，领域泛化、分布偏移、测试时自适应（TTA）与鲁棒性，以及计算病理、医学影像、细粒度细胞分析和医学多模态学习；同时关注 VLA、世界模型与多模态智能体。',
-  heroChips: ['Multimodal Learning', 'Reliable AI & Generalization', 'Medical AI', 'Embodied AI: VLA & World Models'],
+  tagline: 'My research spans multimodal learning, reliable AI, and medical AI. I study VLMs, cross-modal alignment, visual-language grounding, and evidence reasoning; domain generalization, distribution shifts, test-time adaptation (TTA), and robustness; and computational pathology, medical imaging, fine-grained cell analysis, and medical multimodal learning. I also follow embodied AI, including VLA models, world models, and 3D reconstruction.',
+  taglineZh: '我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能及具身智能前沿：包括视觉语言模型、跨模态对齐、视觉语言定位与证据推理，领域泛化、分布偏移、测试时自适应（TTA）与鲁棒性，以及计算病理、医学影像、细粒度细胞分析和医学多模态学习；同时关注 VLA、世界模型与 3D 重建。',
+  heroChips: ['Multimodal Learning', 'Reliable AI & Generalization', 'Medical AI', 'Embodied AI: VLA · World Models · 3D Reconstruction'],
   contact: {
     title: 'Open to discussions and collaborations across multimodal learning, reliable AI, medical AI, and emerging embodied AI.',
     prefix: 'I am currently seeking',
     emphasis: 'PhD opportunities for Fall 2027',
-    suffix: 'My interests include VLMs, cross-modal alignment, visual-language grounding and evidence reasoning; domain generalization, distribution shifts, test-time adaptation and robustness; medical imaging and computational pathology; and emerging embodied AI, including VLA, world models and multimodal agents.',
+    suffix: 'My interests include VLMs, cross-modal alignment, visual-language grounding and evidence reasoning; domain generalization, distribution shifts, test-time adaptation and robustness; medical imaging and computational pathology; and emerging embodied AI, including VLA, world models and 3D reconstruction.',
   },
   seo: {
     title: 'Cheng He | Computer Vision · Multimodal Learning · Medical Imaging',
-    description: 'Cheng He is a master’s student at Fuzhou University interested in multimodal learning, reliable AI, medical AI, and emerging embodied AI, including VLA and world models.',
-    keywords: ['Cheng He', '贺铖', 'Fuzhou University', 'Computer Vision', 'Multimodal Learning', 'VLM', 'Cross-modal Alignment', 'Visual-language Grounding', 'Evidence Reasoning', 'Reliable AI', 'Domain Generalization', 'Test-time Adaptation', 'Medical AI', 'Computational Pathology', 'Medical Imaging', 'Embodied AI', 'VLA', 'World Models', 'Multimodal Agents'],
+    description: 'Cheng He is a master’s student at Fuzhou University interested in multimodal learning, reliable AI, medical AI, and emerging embodied AI, including VLA, world models, and 3D reconstruction.',
+    keywords: ['Cheng He', '贺铖', 'Fuzhou University', 'Computer Vision', 'Multimodal Learning', 'VLM', 'Cross-modal Alignment', 'Visual-language Grounding', 'Evidence Reasoning', 'Reliable AI', 'Domain Generalization', 'Test-time Adaptation', 'Medical AI', 'Computational Pathology', 'Medical Imaging', 'Embodied AI', 'VLA', 'World Models', '3D Reconstruction'],
   },
   links: { scholar: '', github: 'https://github.com/zms618', orcid: '', linkedin: '' },
   highlights: [
@@ -137,12 +137,12 @@ export const site = {
     title: 'Research Interests & Exploration',
     lead: 'During my master’s studies, I have investigated fine-grained visual perception, weakly supervised and multimodal learning, and domain generalization, gaining experience in algorithm design, model implementation, experimental validation, and scientific writing.',
     paragraphs: [
-      'Beyond my current work, I am interested in how vision-language-action models (VLA) and world models connect perception, reasoning, and action, and what research questions arise at these intersections.',
+      'Beyond my current work, I am interested in how vision-language-action models (VLA), world models, and 3D reconstruction connect spatial perception, reasoning, and action, and what research questions arise at these intersections.',
       'Building on my research experience, I hope to explore questions with scientific and practical value while remaining open to cross-disciplinary research and academic exchange.',
     ],
   },
   about: {
-    bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My interests span multimodal learning, reliable AI, and medical AI, with prior work in computational pathology. I also follow emerging embodied AI research, including VLA, world models, and multimodal agents.',
+    bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My interests span multimodal learning, reliable AI, and medical AI, with prior work in computational pathology. I also follow emerging embodied AI research, including VLA, world models, and 3D reconstruction.',
     education: [
       { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0', studentLeadership: 'Class Representative, Class 4, Computer Technology Program' },
       { school: 'Yuzhang Normal University', degree: 'Undergraduate study in Data Science and Big Data Technology', date: 'Sep 2020 – Jun 2024', detail: 'Ranked 2nd in comprehensive evaluation in the major.' },
@@ -162,12 +162,12 @@ export function getSite(lang: Lang): SiteData {
     ...site, name: site.nameZh, location: '中国 · 福州', affiliation: '福州大学', school: '计算机与大数据学院', role: '硕士研究生',
     advisor: { ...site.advisor, name: '陈福海' }, tagline: site.taglineZh,
     heroIdentity: '福州大学硕士研究生 · 2027 Fall 博士申请',
-    heroChips: ['多模态学习', '可靠性与泛化', '医学人工智能', '具身智能：VLA · 世界模型'],
+    heroChips: ['多模态学习', '可靠性与泛化', '医学人工智能', '具身智能：VLA · 世界模型 · 3D 重建'],
     contact: {
       title: '欢迎围绕多模态学习、可靠性与泛化、医学人工智能及具身智能前沿开展交流与合作。',
       prefix: '我计划申请',
       emphasis: '2027 年入学的博士项目',
-      suffix: '我关注视觉语言模型、跨模态对齐、视觉语言定位与证据推理；领域泛化、分布偏移、测试时自适应（TTA）与鲁棒性；计算病理、医学影像、细粒度细胞分析与医学多模态学习；也关注具身智能方向的 VLA、世界模型与多模态智能体。',
+      suffix: '我关注视觉语言模型、跨模态对齐、视觉语言定位与证据推理；领域泛化、分布偏移、测试时自适应（TTA）与鲁棒性；计算病理、医学影像、细粒度细胞分析与医学多模态学习；也关注具身智能方向的 VLA、世界模型与 3D 重建。',
     },
     seo: { ...site.seo, title: '贺铖 Cheng He | 多模态学习 · 可靠 AI · 医学人工智能', description: '贺铖，福州大学计算机技术专业硕士研究生，兴趣涵盖多模态学习、可靠性与泛化、医学人工智能及具身智能前沿；已有工作主要以计算病理学为应用场景。' },
     highlights: [
@@ -215,12 +215,12 @@ export function getSite(lang: Lang): SiteData {
       title: '研究兴趣与学术探索',
       lead: '硕士阶段，我围绕细粒度视觉感知、弱监督与多模态学习、领域泛化等问题开展研究，积累了算法设计、模型实现、实验验证及科研论文写作经验。',
       paragraphs: [
-        '除已有研究工作外，我也对视觉—语言—动作模型（VLA）与世界模型（World Models）如何连接感知、推理与行动，以及这些交叉点带来的研究问题感兴趣。',
+        '除已有研究工作外，我也对视觉—语言—动作模型（VLA）、世界模型（World Models）与 3D 重建如何连接空间感知、推理与行动，以及这些交叉点带来的研究问题感兴趣。',
         '希望在已有科研积累的基础上，持续探索具有科学价值与实际意义的研究问题，并保持跨领域研究与学术交流的开放性。',
       ],
     },
     about: {
-      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能；已有工作主要以计算病理学为应用场景。我也关注 VLA、世界模型与多模态智能体等具身智能前沿。',
+      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能；已有工作主要以计算病理学为应用场景。我也关注 VLA、世界模型与 3D 重建等具身智能前沿。',
       education: [
         { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0', studentLeadership: '计算机技术4班班长' },
         { school: '豫章师范学院', degree: '数据科学与大数据技术 · 本科', date: '2020.09 – 2024.06', detail: '数学与计算机学院 · 综合测评专业第二' },
