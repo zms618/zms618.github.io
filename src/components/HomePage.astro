@@ -34,7 +34,7 @@ const collaborative = orderPublications(publicationGroups.collaborative);
     <aside class="hero-card">
       <div class:list={["portrait", { "has-image": site.avatar }]}>{site.avatar ? <img src={site.avatar} alt={site.name} /> : <span>{site.initials}</span>}</div>
       <p><strong>{site.role}, {site.affiliation}</strong></p>
-      <small>{t.advisor}: <a class="text-link" href={site.advisor.href}>{site.advisor.name} ↗</a></small>
+
     </aside>
   </section>
 

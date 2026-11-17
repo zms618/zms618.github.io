@@ -142,7 +142,7 @@ export const site = {
     ],
   },
   about: {
-    bio: 'I am a master’s student in Computer Technology at Fuzhou University, advised by Fuhai Chen. My interests span multimodal learning, reliable AI, and medical AI, with prior work in computational pathology. I also follow frontier developments in AI, including VLA, world models, and 3D reconstruction.',
+    bio: 'I am a master’s student in Computer Technology at Fuzhou University. My interests span multimodal learning, reliable AI, and medical AI, with prior work in computational pathology. I also follow frontier developments in AI, including VLA, world models, and 3D reconstruction.',
     education: [
       { school: 'Fuzhou University', degree: 'Professional Master’s in Computer Technology', date: 'Sep 2024 – Jun 2027 (expected)', detail: 'School of Computer and Data Science · GPA: 3.4 / 4.0', studentLeadership: 'Class Representative, Class 4, Computer Technology Program' },
       { school: 'Yuzhang Normal University', degree: 'Undergraduate study in Data Science and Big Data Technology', date: 'Sep 2020 – Jun 2024', detail: 'Ranked 2nd in comprehensive evaluation in the major.' },
@@ -220,7 +220,7 @@ export function getSite(lang: Lang): SiteData {
       ],
     },
     about: {
-      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生，导师为陈福海。我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能；已有工作主要以计算病理学为应用场景。我也关注 VLA、世界模型、3D 重建等人工智能前沿发展。',
+      bio: '我是贺铖，福州大学计算机与大数据学院计算机技术专业硕士研究生。我的研究兴趣涵盖多模态学习、可靠性与泛化、医学人工智能；已有工作主要以计算病理学为应用场景。我也关注 VLA、世界模型、3D 重建等人工智能前沿发展。',
       education: [
         { school: '福州大学', degree: '计算机技术 · 专业型硕士研究生', date: '2024.09 – 2027.06（预计）', detail: '计算机与大数据学院 · GPA：3.4 / 4.0', studentLeadership: '计算机技术4班班长' },
         { school: '豫章师范学院', degree: '数据科学与大数据技术 · 本科', date: '2020.09 – 2024.06', detail: '数学与计算机学院 · 综合测评专业第二' },
